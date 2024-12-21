@@ -8,7 +8,6 @@
 #include <sstream>
 #include <algorithm>
 #include <cstdlib>
-#include "base.h"
 
 #define DEBUG
 
@@ -44,7 +43,7 @@ int main() {
     auto it2 = col2.begin();
 
     while ( it1 != col1.end() && it2 != col2.end() ) {
-        cout << *it1 << " " << *it2 << endl;
+        // cout << *it1 << " " << *it2 << endl;
         sum += abs( *it1 - *it2 );
         ++it1; ++it2;
     }
