@@ -10,8 +10,8 @@ set(INCLUDE_DIR "${CMAKE_SOURCE_DIR}/include")
 # Add include directories
 include_directories(${INCLUDE_DIR})
 
-# Collect all source files
-file(GLOB_RECURSE SOURCES "${SRC_DIR}/*.cpp")
+## Collect all source files
+#file(GLOB_RECURSE SOURCES "${SRC_DIR}/*.cpp")
 
 # Collect all source files
 file(GLOB SOURCES "${SRC_DIR}/*.cpp")
@@ -22,8 +22,7 @@ foreach(SOURCE_FILE ${SOURCES})
     get_filename_component(EXEC_NAME ${SOURCE_FILE} NAME_WE)
 
     # Create an executable for the source file
-    add_executable(${EXEC_NAME} ${SOURCE_FILE}
-            include/base.h)
+    add_executable(${EXEC_NAME} ${SOURCE_FILE})
 
 
 endforeach()
