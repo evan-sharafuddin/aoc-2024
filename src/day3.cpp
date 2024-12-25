@@ -31,7 +31,7 @@ int main() {
     // extract the numbers from valid mul() commands, comma separated
     regex get_nums(R"(mul\((\d{1,3}),(\d{1,3})\))");
     // regex get_nums(R"(do\(\).*(?:mul\((\d+),(\d+)\))+.*don't\(\)))");
-    regex get_matches(R"(do\(\)(.*?)don't\(\))");
+    regex get_matches(R"(do\(\)(.|\n|\r)*?don't\(\))");
     smatch num_matches;
     // cout << s << endl;
 
